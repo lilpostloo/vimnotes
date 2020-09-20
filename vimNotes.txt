@@ -1,0 +1,96 @@
+
+
+
+
+
+UP      [k, {, ctrl+u]
+Down    [j, }, ctrl+d]
+Left    [h, b, ge, B, gE, F{char}, ^,  0]     
+Right   [l, w, e,  W, E,  f{char}, g_, $]
+
+
+
+
+Motions With Search
+
+ /{pattern} -> enter -> n or N      Search forward                      /+enter     Repeat Search
+ ?{pattern} -> enter -> n or N      Search backwards                    ?+enter     Repeat search
+ *                                  Find same word under cursor 
+
+Counts
+{count}motion eg 2k, 5B
+
+
+
+Glossary
+    
+    UP
+            k           up one char 
+            {           up one paragraph
+            ctrl+u      up half screen
+
+    DOWN
+            j           down one char
+            }           down one paragraph 
+            ctrl+d      down half screen
+
+    FORWARD
+            l           right one char
+            w           start of next word
+            e           end of next word
+            W           same as w including special chars
+            E           same as e including specyial chars
+            f{char}     fine next occurence of char                     (; next , prev)
+            g_          go to rightmost char
+            $           go to end of line   
+
+    BACK
+            h           left one char
+            b           start of next word leftwards
+            ge          end of word leftwards 
+            B           same of b includes special chars 
+            gE          same as ge includes special chars
+            F{char}     find next occurence leftwards                   (; next , prev)
+            ^           go to leftmost char
+            0           go to start of line
+
+    CURSOR MATCH
+            *           find next occurence of word under cursor
+            #           find pre occurence of word under cursor
+            gd          jump to definition of var under cursor
+            gb          add another cursor on next match
+
+
+    HIGHLIGHT
+            v           visual mode
+            V           visual mode line
+            Ctl+V       visual mode block
+            af          while in vis mode repeat to highlight larger and larger text         
+
+    PATTERN SEARCH
+            /{pattern} + enter  forward search                    (n next, N prev)  
+            ?{pattern} + enter  back search                       (n next, N prev)
+            / + enter           repeat forward seach
+            ? + enter           repeat backward search
+            
+    WHOLE LINES
+            yy          copy whole line
+            dd          delete whole line            
+            cc          change whole line            
+
+    OPERATORS
+            y           yank    
+            c           change          (C change line from cursor)
+            d           delete          (D delete line from cursor)
+
+    HTML
+            cit        change inner contents of html tag
+            yit        copy inner tag contents
+     
+    Surrounding
+        ds' to delete the surrounding ' (ds{char})
+        cs'" to change the surrounding ' for " (cs{old}{new})
+
+
+
+
